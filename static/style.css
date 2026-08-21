@@ -1,0 +1,665 @@
+/* ===== INFINEON GREEN THEME ===== */
+
+/* Font */
+* {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Main background */
+.stApp {
+    background-color: #f4f6f4;
+}
+.stApp > div:first-child {
+    padding-top: 0px !important;
+}
+
+.block-container {
+    padding-top: 64px !important;
+    padding-bottom: 16px !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    max-width: 100% !important;
+}
+/* Make table use full available width */
+.inf-table {
+    width: 100%;
+    min-width: 900px;    /* add this */
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    table-layout: auto;  /* add this */
+}
+/* Fix table overflow */
+.inf-table-wrapper {
+    overflow-x: hidden !important;
+    width: 100%;
+}
+
+.inf-table {
+    table-layout: fixed;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.inf-table th,
+.inf-table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 6px 8px;
+}
+/* ── Fix Bearer Token text area visibility ── */
+.stTextArea textarea {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    font-size: 0.78rem !important;
+    font-family: monospace !important;
+}
+/* ==================== OTD TABLE FILTER STYLES ==================== */
+
+.otd-filter-popup {
+    display: none;
+    position: fixed;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    width: 320px;
+    max-height: 500px;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.otd-filter-popup.show {
+    display: flex;
+}
+
+.otd-filter-popup-header {
+    background: #00695c;
+    color: white;
+    padding: 10px 14px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.otd-filter-popup-header button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.otd-filter-search {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.otd-filter-search input {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.otd-filter-actions {
+    padding: 6px 12px;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.otd-filter-actions button {
+    padding: 4px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.otd-filter-actions button:hover {
+    background: #e0f2f1;
+}
+
+.otd-filter-list {
+    overflow-y: auto;
+    max-height: 280px;
+    padding: 4px 0;
+}
+
+.otd-filter-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.otd-filter-item:hover {
+    background: #f0f9f7;
+}
+
+.otd-filter-item input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    accent-color: #00695c;
+}
+
+.otd-filter-footer {
+    padding: 10px 14px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    border-top: 1px solid #eee;
+    background: #fafafa;
+}
+
+.otd-btn-cancel {
+    padding: 6px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background: white;
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.otd-btn-apply {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #00695c;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.otd-btn-apply:hover { background: #004d40; }
+
+/* Table styles */
+.otd-table-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    font-family: sans-serif;
+}
+
+.otd-table-header-bar {
+    background: #00695c;
+    color: white;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.otd-table-header-bar span {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.otd-table {
+    width: 100%;
+    min-width: 1400px;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    font-family: sans-serif;
+}
+
+.otd-table thead tr {
+    background: #004d40;
+    color: white;
+    text-align: left;
+}
+
+.otd-table th {
+    padding: 8px 10px;
+    white-space: nowrap;
+    position: relative;
+    user-select: none;
+}
+
+.otd-table th.filterable {
+    cursor: pointer;
+}
+
+.otd-table th.filterable:hover {
+    background: #00695c;
+}
+
+.otd-table th.filter-active {
+    background: #00897b !important;
+}
+
+.filter-icon {
+    font-size: 0.7rem;
+    margin-left: 4px;
+    opacity: 0.8;
+}
+
+.otd-table tbody tr:nth-child(even) { background: #f9f9f9; }
+.otd-table tbody tr:hover { background: #e0f2f1; }
+.otd-table tbody tr.hidden { display: none; }
+
+.otd-table-footer {
+    padding: 10px 16px;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    color: #555;
+}
+
+.otd-count-badge {
+    background: #e0f2f1;
+    color: #00695c;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.78rem;
+    font-weight: bold;
+}
+/* ── Fix ALL sidebar text inputs & text areas ── */
+section[data-testid="stSidebar"] .stTextArea textarea {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #cccccc !important;
+}
+
+/* ── Fix sidebar text input labels ── */
+section[data-testid="stSidebar"] label {
+    color: #ffffff !important;
+}
+
+/* ── Fix sidebar text input fields ── */
+section[data-testid="stSidebar"] .stTextInput input {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+}
+/* Make action buttons smaller */
+.view-btn {
+    display: inline-block;
+    padding: 3px 6px !important;
+    font-size: 0.72rem !important;
+    white-space: nowrap;
+}
+/* Make ACTION column not wrap */
+.inf-table td:last-child,
+.inf-table th:last-child {
+    white-space: nowrap;
+    min-width: 80px;
+}
+/* Remove white gap/box near sidebar */
+[data-testid="stAppViewContainer"] {
+    padding-top: 0 !important;
+}
+
+[data-testid="stAppViewBlockContainer"] {
+    padding-top: 64px !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    max-width: 100% !important;
+}
+
+/* Fix white box from sidebar overlap */
+[data-testid="stSidebarContent"] {
+    padding-top: 16px !important;
+}
+
+section[data-testid="stSidebar"] > div {
+    padding-top: 0 !important;
+}
+/* === WAVE HEADER === */
+.inf-header {
+    background: linear-gradient(135deg, #0F7B6C  0%, #20ac99  50%, #199e8c  100%);
+    padding: 24px 32px;
+    border-radius: 0 0 60px 0;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(33,134,82,0.3);
+}
+.inf-header h1 {
+    color: white !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+.inf-header p {
+    color: #C8F0D8 !important;
+    margin: 4px 0 0 0 !important;
+    font-size: 0.9rem !important;
+}
+
+/* === SIDEBAR BACKGROUND === */
+[data-testid="stSidebar"] {
+    background-color: #158173 !important;
+}
+
+/* All text in sidebar white */
+[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+/* === SIDEBAR LABELS === */
+[data-testid="stSidebar"] label {
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* === SIDEBAR HEADER TEXT === */
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] p {
+    color: white !important;
+}
+
+/* === NUMBER INPUT (Year) === */
+[data-testid="stSidebar"] [data-testid="stNumberInput"] input {
+        background: linear-gradient(135deg, #0F7B6C  0%, #20ac99  50%, #199e8c  100%);
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.5) !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stNumberInput"] input:focus {
+    border-color: white !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.3) !important;
+}
+
+/* +/- buttons on number input */
+[data-testid="stSidebar"] [data-testid="stNumberInput"] button {
+    background-color: #0F7B6C !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.4) !important;
+    border-radius: 8px !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stNumberInput"] button:hover {
+        background: linear-gradient(135deg, #0F7B6C  0%, #20ac99  50%, #199e8c  100%);
+}
+
+/* === MULTISELECT CONTAINER === */
+[data-testid="stSidebar"] [data-testid="stMultiSelect"] div[data-baseweb="select"] > div {
+    background-color: #0F7B6C !important;
+    border: 1px solid rgba(255,255,255,0.5) !important;
+    border-radius: 8px !important;
+}
+
+/* Multiselect input text */
+[data-testid="stSidebar"] [data-testid="stMultiSelect"] input {
+    color: white !important;
+    background-color: transparent !important;
+}
+
+/* Multiselect placeholder */
+[data-testid="stSidebar"] [data-testid="stMultiSelect"] [data-testid="stWidgetLabel"] {
+    color: rgba(255,255,255,0.7) !important;
+}
+
+/* Selected tags */
+[data-testid="stSidebar"] [data-baseweb="tag"] {
+      background: linear-gradient(135deg, #0F7B6C  0%, #20ac99  50%, #199e8c  100%);
+    border: 1px solid rgba(255,255,255,0.4) !important;
+    border-radius: 6px !important;
+    padding: 2px 8px !important;
+}
+
+[data-testid="stSidebar"] [data-baseweb="tag"] span {
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+/* X (remove) button on tags */
+[data-testid="stSidebar"] [data-baseweb="tag"] [role="presentation"] {
+    color: white !important;
+}
+
+/* Dropdown arrow icon */
+[data-testid="stSidebar"] [data-testid="stMultiSelect"] svg {
+    fill: white !important;
+}
+
+/* === METRIC CARDS === */
+[data-testid="stMetric"] {
+    background-color: #ffffff;
+    border: 1px solid #0F7B6C;
+    border-top: 4px solid #0F7B6C;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(33,134,82,0.1);
+}
+[data-testid="stMetricValue"] {
+    color: #0F7B6C  !important;
+    font-size: 2rem !important;
+    font-weight: bold !important;
+}
+[data-testid="stMetricLabel"] {
+    color: #555 !important;
+    font-size: 0.85rem !important;
+}
+
+/* === BOOTSTRAP-STYLE TABLE === */
+.inf-table-wrapper {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow-x: auto;        /* change overflow:hidden to overflow-x:auto */
+    overflow-y: visible;
+    margin-top: 16px;
+    width: 100%;
+}
+.inf-table-header {
+    background: linear-gradient(90deg, #0F7B6C, #0F7B6C );
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inf-table-header span {
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.inf-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+.inf-table thead tr {
+    background-color: #f0f7f2;
+    border-bottom: 2px solid #0F7B6C 
+}
+.inf-table thead th {
+    padding: 12px 16px;
+    text-align: left;
+    color: #0F7B6C;
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+.inf-table tbody tr {
+    border-bottom: 1px solid #e8f5ed;
+    transition: background-color 0.15s ease;
+}
+.inf-table tbody tr:hover {
+    background-color: #f0faf4;
+}
+.inf-table tbody td {
+    padding: 11px 16px;
+    color: #333;
+    vertical-align: middle;
+}
+
+/* Badges */
+.badge-single {
+    background-color: #e8f5e9;
+    color: #0F7B6C;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid #c8e6c9;
+}
+.badge-empty {
+    background-color: #f5f5f5;
+    color: #888;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    border: 1px solid #e0e0e0;
+}
+
+/* View button */
+.view-btn {
+    background-color: #0F7B6C;
+    color: white !important;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+.view-btn:hover {
+    background-color: #0F7B6C;
+    color: white !important;
+    text-decoration: none;
+}
+
+/* === PAGINATION === */
+.inf-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #fafafa;
+    border-top: 1px solid #e8f5ed;
+}
+.inf-pagination span {
+    color: #555;
+    font-size: 0.85rem;
+}
+.page-btn {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 2px;
+    color: #0F7B6C;
+    background: white;
+    border: 1px solid #c8e6c9;
+    text-decoration: none;
+}
+.page-btn.active {
+    background-color: #0F7B6C;
+    color: white;
+    border-color: #0F7B6C;
+}
+
+/* === STREAMLIT BUTTONS === */
+.stButton > button {
+    background-color: #0F7B6C !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-weight: bold !important;
+}
+.stButton > button:hover {
+    background-color: #0F7B6C !important;
+}
+
+[data-testid="stDownloadButton"] > button {
+    background-color: #0F7B6C !important;
+    color: white !important;
+    border-radius: 6px !important;
+    font-weight: bold !important;
+}
+
+/* === SEARCH INPUT === */
+[data-testid="stTextInput"] input {
+    border: 2px solid #0F7B6C !important;
+    border-radius: 6px !important;
+}
+
+/* === DATAFRAME (detail page) === */
+[data-testid="stDataFrame"] {
+    border: 1px solid #C8E6D0 !important;
+    border-radius: 8px !important;
+}
+
+/* === TOP STREAMLIT HEADER BAR === */
+header[data-testid="stHeader"] {
+    background-color: #2c8d80 !important;
+}
+
+/* Title on detail page */
+h1 {
+    color: #0F7B6C !important;
+    border-bottom: 3px solid #0F7B6C ;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+h2, h3 {
+    color: #0F7B6C !important;
+}
+
+/* === BOTTOM CONTROLS ROW === */
+[data-testid="stHorizontalBlock"] {
+    align-items: center !important;
+    margin-top: 5px !important;
+    gap: 8px !important;
+}
+
+/* Selectbox (page selector) — compact */
+[data-testid="stSelectbox"] {
+    min-width: 60px !important;
+}
+
+[data-testid="stDownloadButton"] > button {
+    background-color: #0F7B6C !important;
+    color: white !important;
+    border-radius: 6px !important;
+    font-weight: bold !important;
+}
+/* === LOGO — no white background === */
+.inf-logo img {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* Sidebar logo — no white box */
+[data-testid="stSidebar"] img {
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}

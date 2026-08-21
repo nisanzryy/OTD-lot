@@ -1,0 +1,79 @@
+[
+  {
+    "LOT NUMBER":"VA603691K10",
+    "OPERATION":"1669",
+    "DESCRIPTION":"M9 disposition (pending CLK22-single tool down+filler&tw shortage)",
+    "ISSUE":"Disposition",
+    "REMARKS":"Suhazni"
+  },
+  {
+    "LOT NUMBER":"VA603691K10",
+    "OPERATION":"1669",
+    "DESCRIPTION":"M9 disposition (pending CLK22-single tool down+filler&tw shortage)",
+    "ISSUE":"Disposition",
+    "REMARKS":"Suhazni"
+  },
+  {
+    "LOT NUMBER":"VA603691K10",
+    "OPERATION":"9460",
+    "DESCRIPTION":"QMP TD",
+    "ISSUE":"QMP UPE\/TD\/PI",
+    "REMARKS":"Suhazni"
+  },
+  {
+    "LOT NUMBER":"VA614483",
+    "OPERATION":"8685",
+    "DESCRIPTION":"unknown status+lot disposition+delay load",
+    "ISSUE":"Disposition",
+    "REMARKS":"Suhazni"
+  },
+  {
+    "LOT NUMBER":"VA614483",
+    "OPERATION":"8078",
+    "DESCRIPTION":"Hold for upe\/td to verify scan result",
+    "ISSUE":"Disposition",
+    "REMARKS":"Suhazni"
+  },
+  {
+    "LOT NUMBER":"VA614483",
+    "OPERATION":"9425",
+    "DESCRIPTION":"QMP upe disposition",
+    "ISSUE":"QMP UPE\/TD\/PI",
+    "REMARKS":"Suhazni"
+  },
+  {
+    "LOT NUMBER":"VA614483",
+    "OPERATION":"8827",
+    "DESCRIPTION":"single tool ECDV5302 - tool down ",
+    "ISSUE":"Tool error\/down\/conversion",
+    "REMARKS":"Suhazni"
+  },
+  {
+    "LOT NUMBER":"VA618733",
+    "OPERATION":"916",
+    "DESCRIPTION":"Hold for UPE -CD target+delay run",
+    "ISSUE":"Disposition",
+    "REMARKS":"Suhazni"
+  },
+  {
+    "LOT NUMBER":"VA618733",
+    "OPERATION":"7132",
+    "DESCRIPTION":"Delay load+APC violation+lot disposition",
+    "ISSUE":"Tool error\/down\/conversion",
+    "REMARKS":"Suhazni"
+  },
+  {
+    "LOT NUMBER":"VA603691K10",
+    "OPERATION":"7148",
+    "DESCRIPTION":"Delay load",
+    "ISSUE":"Delay load",
+    "REMARKS":"Suhazni"
+  },
+  {
+    "LOT NUMBER":"VA603691K10",
+    "OPERATION":"9492",
+    "DESCRIPTION":"Delay exms merge (pending CLK22-single tool down+filler&tw shortage)",
+    "ISSUE":"Delay exms merge\/split",
+    "REMARKS":"Suhazni"
+  }
+]
